@@ -1,51 +1,129 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     background-color: #f4f4f4;
   }
   
-  header, footer {
-    text-align: center;
-    margin-bottom: 20px;
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
   }
   
-  header h1 {
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  header .menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  
+  header .nav-links {
+    display: flex;
+  }
+  
+  header .nav-links ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+    display: flex;
+  }
+  
+  header .nav-links ul li {
+    margin-left: 20px;
+  }
+  
+  header .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
   }
   
   .container {
     display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .section {
-    background: white;
-    border-radius: 5px;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    margin: 10px;
-    flex: 1 1 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   
-  .tags .tag {
+  .profile-column, .content-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .profile {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  .profile img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .profile h2 {
+    margin-top: 10px;
+  }
+  
+  .profile p {
+    margin: 10px 0;
+  }
+  
+  .profile .button {
     display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
     background: #333;
     color: #fff;
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 3px;
+    text-decoration: none;
+    border-radius: 5px;
   }
   
-  .experience, .publication, .project, .article {
-    margin-bottom: 20px;
+  .content-column {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
   }
   
-  h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    header .nav-links {
+      display: none;
+      flex-direction: column;
+    }
+  
+    header .menu-icon {
+      display: block;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
   }
   
