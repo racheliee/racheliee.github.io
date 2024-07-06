@@ -3,7 +3,6 @@ layout: default
 title: Home
 permalink: /
 ---
-
 <div class="container">
   <div class="section">
     <h2>Tech Stack</h2>
