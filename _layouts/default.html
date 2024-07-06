@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/about">About</a></li>
+          <li><a href="{{ site.baseurl }}/projects">Projects</a></li>
+          <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+          <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="profile-column">
+      <!-- Profile information -->
+      <div class="profile">
+        <img src="/path/to/your/profile-picture.jpg" alt="Profile Picture">
+        <h2>Your Name</h2>
+        <p>Your Title</p>
+        <p>Your Description</p>
+        <a href="/path/to/your/resume.pdf" class="button">Download Resume</a>
+      </div>
+    </div>
+    <div class="content-column">
+      {{ content }}
+    </div>
+  </main>
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("navLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
