@@ -3,6 +3,7 @@
 <head>
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -27,11 +28,11 @@
     <div class="profile-column">
       <!-- Profile information -->
       <div class="profile">
-        <img src="../img_resources/profile-picture.jpg" alt="Profile Picture">
+        <img src="{{ '/assets/images/profile-picture.jpg' | relative_url }}" alt="Profile Picture">
         <h2>Your Name</h2>
         <p>Your Title</p>
         <p>Your Description</p>
-        <a href="/path/to/your/resume.pdf" class="button">Download Resume</a>
+        <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button">Download Resume</a>
       </div>
     </div>
     <div class="content-column">
