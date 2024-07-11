@@ -1,8 +1,8 @@
 # Jekyll configuration file
-title: "Rachel Park"
+title: "Rachel Park' Personal Portfolio"
 author: "Rachel"
 email: "racheliee.dwg@gmail.com"
-description: "Personal Portfolio"
+description: "CSE & IE @ skku"
 baseurl: "" # for user/organization site, leave this empty
 url: "https://racheliee.github.io" # the base hostname & protocol for your site
 favicon-url: "/assets/images/favicon.ico"
@@ -17,7 +17,7 @@ plugins:
 # Author info
 author-name: "Rachel Park"
 author-image: "/assets/images/profile-picture.jpg"
-author-bio: "I'm a student studying industrial engineering and computer science at SKKU."
+author-bio: "I'm currently a student studying industrial engineering and computer science at SKKU. I'm still learning and growing, but I'm excited to share my journey with you."
 
 # Hero image
 hero-image: "https://unsplash.com/photos/black-and-white-computer-keyboard-4IxPVkFGJGI"
