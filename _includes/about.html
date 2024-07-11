@@ -7,6 +7,7 @@
                         <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
                     </figure>
                     <br>
+                    <h1 class="title is-2 bio-title">{{site.author-name}}</h1>
                     <!-- Tech Stack Section -->
                     <div class="container tech-stack">
                         <h2 class="tech-stack-title">Tech Stack</h2>
@@ -20,8 +21,24 @@
                     </div>
                 </div>
                 <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen">
-                    <h1 class="title is-2">{{site.author-name}}</h1>
-                    <p class="has-text-centered">{{site.author-bio}}</p>
+                    <h1 class="aboutme-title">About Me</h1>
+                    <br>
+                    <p>{{site.author-bio}}</p>
+                    <br>
+                    <!-- Experiences Section -->
+                    <div class="container experiences">
+                        <h2 class="experience-title">Experiences</h2>
+                        <div class="experience-items">
+                            {% for experience in site.experiences %}
+                            <div class="experience-item">
+                                <h3>{{ experience.position }}</h3>
+                                <p><strong>{{ experience.company }}</strong></p>
+                                <p>{{ experience.date }}</p>
+                                <p>{{ experience.description }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                     <br>
                     <div class="container columns is-centered">
                         <div>
@@ -31,8 +48,8 @@
                             </a>
                         </div>
                         <div>
-                            <a href="{{site.url}}{{site.baseurl}}/blog"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Blog</a>
+                            <a href="{{site.url}}{{site.baseurl}}{{site.resume-path}}"
+                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Download Resume</a>
                             </a>
                         </div>
                     </div>

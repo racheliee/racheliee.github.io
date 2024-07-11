@@ -1,6 +1,5 @@
 --- 
 --- 
-
 @import "main.scss";
 
 #navbar {
@@ -116,6 +115,56 @@ a.navbar-item.is-active {
         }
       }
     }
+  }
+
+  .experiences {
+    margin-top: 2rem;
+
+    .experience-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .experience-items {
+      display: flex;
+      flex-direction: column;
+
+      .experience-item {
+        background: #f9f9f9;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem;
+        }
+
+        p {
+          margin: 0.2rem 0;
+        }
+      }
+    }
+  }
+
+  .hero-body {
+    padding-bottom: 2rem;
+  }
+
+  .column.has-text-left-desktop {
+    // positions the author-name text
+    margin-top: 2rem;
+  }
+
+  .bio-title {
+    font-size: 2rem;
+  }
+
+  .aboutme-title {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 

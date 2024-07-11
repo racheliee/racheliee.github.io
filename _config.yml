@@ -1,5 +1,5 @@
 # Jekyll configuration file
-title: "Rachel Park' Personal Portfolio"
+title: "Rachel Park's Personal Portfolio"
 author: "Rachel"
 email: "racheliee.dwg@gmail.com"
 description: "CSE & IE @ skku"
@@ -14,13 +14,18 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Author info
-author-name: "Rachel Park"
-author-image: "/assets/images/profile-picture.jpg"
-author-bio: "I'm currently a student studying industrial engineering and computer science at SKKU. I'm still learning and growing, but I'm excited to share my journey with you."
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Hero image
 hero-image: "https://unsplash.com/photos/black-and-white-computer-keyboard-4IxPVkFGJGI"
+
+# Author info
+author-name: "Rachel Park"
+author-image: "/assets/images/profile-picture.jpg"
+author-bio: "I'm currently a student studying industrial engineering and computer science at SKKU. Take a look at my projects and feel free to reach out to me!"
 
 # Tech stack
 tech-stack:
@@ -29,6 +34,25 @@ tech-stack:
   - Spring Boot
   - Java
   - Rust
+
+# Resume
+resume-path: "/assets/files/resume.pdf"
+
+# Experiences
+experiences:
+  - position: "Software Engineering Intern"
+    company: "Tech Company"
+    date: "June 2023 - August 2023"
+    description: "Worked on developing and optimizing backend services using Java and Spring Boot."
+  - position: "Research Assistant"
+    company: "University Lab"
+    date: "January 2022 - May 2023"
+    description: "Assisted in research on machine learning algorithms and their applications in real-world scenarios."
+  - position: "Web Developer"
+    company: "Freelance"
+    date: "March 2021 - December 2021"
+    description: "Developed and maintained several websites for local businesses using HTML, CSS, and JavaScript."
+
 
 # Exclude from processing.
 include:
