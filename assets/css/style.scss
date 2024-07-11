@@ -3,7 +3,7 @@
 @import "main.scss";
 
 #navbar {
-  opacity: 0.90;
+  opacity: 0.95;
 }
 
 .is-active {
@@ -71,27 +71,34 @@ a.navbar-item.is-active {
 
 #about {
   .fixed-column {
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
+    float: left;
+    // position: sticky;
+    // top: 75%;
+    // transform: translateY(-50%);
+    // max-height: calc(100vh - 60rem); /* Adjust the height limit */
+    // display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
   }
 
   .scroll-column {
-    overflow-y: scroll;
+    max-height: 100vh;
+    overflow-y: auto;
     padding-left: 2rem;
 
     /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
     &::-webkit-scrollbar {
-      width: 0;  /* Remove scrollbar space */
-      background: transparent;  /* Optional: just make scrollbar invisible */
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
     }
 
     /* Hide scrollbar for IE, Edge and Firefox */
     & {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
-  }
+}
 
   .image {
     max-width: 20vmax;
