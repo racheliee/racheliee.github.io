@@ -1,0 +1,39 @@
+# Jekyll configuration file
+title: "Rachel Park"
+author: "Rachel"
+email: "racheliee.dwg@gmail.com"
+description: "Personal Portfolio"
+baseurl: "" # for user/organization site, leave this empty
+url: "https://racheliee.github.io" # the base hostname & protocol for your site
+favicon-url: "/assets/images/favicon.ico"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Author info
+author-name: "Rachel Park"
+author-image: "/assets/images/profile-picture.jpg"
+author-bio: "I'm a student studying industrial engineering and computer science at SKKU."
+
+# Hero image
+hero-image: "https://unsplash.com/photos/black-and-white-computer-keyboard-4IxPVkFGJGI"
+
+# Tech stack
+tech-stack:
+  - C
+  - Python
+  - Spring Boot
+
+# Exclude from processing.
+include:
+  - _pages
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
