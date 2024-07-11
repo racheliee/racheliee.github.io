@@ -1,13 +1,13 @@
-<section class="hero is-fullheight has-text-centered has-background-white-ter" id="about">
+<section class="hero has-text-centered has-background-white-ter" id="about">
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd">
+                <div class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd fixed-column">
                     <figure class="image">
                         <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
                     </figure>
                     <br>
-                    <h1 class="title is-2 bio-title">{{site.author-name}}</h1>
+                    <h1 class="bio-title">{{site.author-name}}</h1>
                     <!-- Tech Stack Section -->
                     <div class="container tech-stack">
                         <h2 class="tech-stack-title">Tech Stack</h2>
@@ -20,11 +20,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen">
+                <div
+                    class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen scroll-column">
                     <h1 class="aboutme-title">About Me</h1>
                     <br>
                     <p>{{site.author-bio}}</p>
                     <br>
+                    <!-- Education Section -->
+                    <div class="container education">
+                        <h2 class="education-title">Education</h2>
+                        <div class="education-items">
+                            {% for education in site.education %}
+                            <div class="education-item">
+                                <h3>{{ education.degree }}</h3>
+                                <p>
+                                    <span class="institution"><strong>{{ education.institution }}</strong></span>
+                                    <span class="date">{{ education.date }}</span>
+                                </p>
+                                <p>{{ education.description }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                     <!-- Experiences Section -->
                     <div class="container experiences">
                         <h2 class="experience-title">Experiences</h2>
@@ -32,8 +49,10 @@
                             {% for experience in site.experiences %}
                             <div class="experience-item">
                                 <h3>{{ experience.position }}</h3>
-                                <p><strong>{{ experience.company }}</strong></p>
-                                <p>{{ experience.date }}</p>
+                                <p>
+                                    <span class="company"><strong>{{ experience.company }}</strong></span>
+                                    <span class="date">{{ experience.date }}</span>
+                                </p>
                                 <p>{{ experience.description }}</p>
                             </div>
                             {% endfor %}
@@ -45,15 +64,15 @@
                             <a href="{{site.url}}{{site.baseurl}}/#contact"
                                 class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Contact
                                 Me</a>
-                            </a>
                         </div>
                         <div>
                             <a href="{{site.url}}{{site.baseurl}}{{site.resume-path}}"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Download Resume</a>
-                            </a>
+                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Download
+                                Resume</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>

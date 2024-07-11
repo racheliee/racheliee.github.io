@@ -3,7 +3,7 @@
 @import "main.scss";
 
 #navbar {
-  opacity: 0.95;
+  opacity: 0.90;
 }
 
 .is-active {
@@ -70,6 +70,29 @@ a.navbar-item.is-active {
 }
 
 #about {
+  .fixed-column {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .scroll-column {
+    overflow-y: scroll;
+    padding-left: 2rem;
+
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+      width: 0;  /* Remove scrollbar space */
+      background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+
   .image {
     max-width: 20vmax;
     margin: auto;
@@ -79,9 +102,11 @@ a.navbar-item.is-active {
     }
   }
 
-  a {
-    min-width: 25vmax;
-    margin: 0.5rem;
+  .bio-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
   }
 
   .tech-stack {
@@ -117,56 +142,86 @@ a.navbar-item.is-active {
     }
   }
 
-  .experiences {
+  .aboutme-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  .education, .experiences {
     margin-top: 2rem;
 
-    .experience-title {
+    .education-title, .experience-title {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       font-weight: bold;
     }
 
-    .experience-items {
-      display: flex;
-      flex-direction: column;
-
-      .experience-item {
-        background: #f9f9f9;
+    .education-items, .experience-items {
+      .education-item, .experience-item {
+        background: #fff;
         padding: 1rem;
-        margin: 0.5rem 0;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
 
         h3 {
-          font-size: 1.2rem;
-          margin-bottom: 0.3rem;
+          font-size: 1.15rem;
+          font-weight: bold;
+          color:#333;
         }
 
         p {
-          margin: 0.2rem 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0.5rem 0;
+
+          .date {
+            font-size: 0.9rem;
+            color: #777;
+          }
+
+          .company, .institution {
+            flex: 1;
+            color: #777;
+            font-weight: normal;
+          }
         }
       }
     }
   }
 
-  .hero-body {
-    padding-bottom: 2rem;
-  }
+  @media (max-width: 768px) {
+    .columns {
+      flex-direction: column;
 
-  .column.has-text-left-desktop {
-    // positions the author-name text
-    margin-top: 2rem;
-  }
+      .fixed-column, .scroll-column {
+        position: relative;
+        transform: none;
+        padding: 0;
+      }
 
-  .bio-title {
-    font-size: 2rem;
-  }
+      .fixed-column {
+        order: 2;
+        margin-top: 2rem;
+      }
 
-  .aboutme-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+      .scroll-column {
+        order: 1;
+      }
+    }
+
+    .tech-stack-items {
+      justify-content: center;
+    }
+
+    .tech-stack-item {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
   }
 }
+
 
 #contact {
   #contact-button {
