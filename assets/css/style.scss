@@ -150,7 +150,7 @@ a.navbar-item.is-active {
     margin-top: 2rem;
     color: #333;
   }
-
+  
   .education, .experiences {
     margin-top: 2rem;
 
@@ -163,34 +163,69 @@ a.navbar-item.is-active {
 
     .education-items, .experience-items {
       .education-item, .experience-item {
-        background: #fff;
-        padding: 1rem;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.7rem;
 
-        h3 {
-          font-size: 1.15rem;
-          font-weight: bold;
-          color: #333;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: #ddd;
         }
 
-        p {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 0;
+        &::after {
+          content: '';
+          position: absolute;
+          left: -4px;
+          top: 0;
+          width: 10px;
+          height: 10px;
+          background: #ddd;
+          border-radius: 50%;
+        }
 
-          .date {
-            font-size: 0.9rem;
-            color: #777;
+        .timeline {
+          padding-left: 2rem;
+          
+          .timeline-content {
+            position: relative;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           }
 
-          .company, .school {
-            flex: 1;
-            color: #555;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+          .timeline-date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-left: auto;
+          }
+
+          h3 {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #333;
+          }
+
+          p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .company, .school {
+              color: #777;
+              font-weight: 600;
+              margin-bottom: 0.5rem;
+            }
+
+            .date {
+              margin-left: auto;
+              color: #777;
+            }
           }
         }
       }
