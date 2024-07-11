@@ -76,7 +76,7 @@ a.navbar-item.is-active {
     margin: auto;
 
     img {
-      border: 0.25rem dotted black;
+      border: 0.25rem none black;
     }
   }
 
@@ -101,11 +101,12 @@ a.navbar-item.is-active {
       justify-content: center;
 
       .tech-stack-item {
+        font-size: 0.8rem;
         background: #333;
         color: #fff;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border-radius: 5px;
+        padding: 0.3rem 0.7rem;
+        margin: 0.2rem;
+        border-radius: 15px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
 

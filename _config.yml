@@ -27,6 +27,8 @@ tech-stack:
   - C
   - Python
   - Spring Boot
+  - Java
+  - Rust
 
 # Exclude from processing.
 include:
