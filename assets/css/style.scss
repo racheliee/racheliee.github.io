@@ -1,9 +1,10 @@
 --- 
 --- 
 @import "main.scss";
-
 #navbar {
   opacity: 0.95;
+  width: 100%;
+  margin: 0;
 }
 
 .is-active {
@@ -18,16 +19,16 @@
 
 a.navbar-item:hover,
 .navbar-link:hover {
-  background-color: rgba($color: #fff, $alpha: 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
   color: white !important;
 }
 
 a.navbar-item.is-active {
-  background-color: rgba($color: #fff, $alpha: 0.25) !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
   color: white !important;
 
   &:hover {
-    background-color: rgba($color: #fff, $alpha: 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
     color: grey;
   }
 }

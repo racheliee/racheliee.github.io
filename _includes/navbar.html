@@ -1,6 +1,5 @@
 <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
-    <div class="container">
-
+    <div class="container is-fluid">
         <!-- logo or branding image on left side -->
         <div class="navbar-brand">
             <a class="navbar-item"
@@ -15,12 +14,9 @@
         </div>
 
         <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
-        <div class="navbar-menu has-background-black" id="navbar-menu">
-            <!-- navbar items | left side -->
-            <!-- <div class="navbar-start">
-            </div> -->
+        <div class="navbar-menu has-background-black is-active" id="navbar-menu">
             <!-- navbar items | right side -->
-            <div class="navbar-end">
+            <div class="navbar-end is-flex is-justify-content-space-between is-flex-grow-1">
                 <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
                     href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
                 <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">ABOUT</a>
@@ -30,7 +26,6 @@
                 
                 {% include dropdown.html %}
             </div>
-
         </div>
     </div>
 </nav>
