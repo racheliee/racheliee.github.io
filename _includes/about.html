@@ -1,7 +1,7 @@
 <section class="hero is-fullheight has-text-centered has-background-white-ter" id="about">
     <div class="hero-body">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-variable is-1">
                 <div class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd fixed-column">
                     <figure class="image">
                         <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
@@ -20,61 +20,82 @@
                         </div>
                     </div>
                 </div>
-                <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen scroll-column">
-                    <h1 class="aboutme-title">About Me</h1>
-                    <br>
-                    <p>{{site.author-bio}}</p>
-                    <br>
-                    <!-- Education Section -->
-                    <div class="container education">
-                        <h2 class="education-title">Education</h2>
-                        <div class="education-items">
-                            {% for education in site.education %}
-                            <div class="education-item">
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <h3>{{ education.degree }}</h3>
-                                        <p>
-                                            <span class="school">{{ education.school }}</span>
-                                            <span class="date">{{ education.date }}</span>
-                                        </p>
-                                        <p>{{ education.description }}</p>
-                                    </div>
+                <div class="column has-text-left scroll-column">
+                    <div class="fixed-content-wrapper">
+                        <!-- Fixed column content goes here for mobile view -->
+                        <figure class="image">
+                            <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
+                        </figure>
+                        <br>
+                        <h1 class="bio-title">{{site.author-name}}</h1>
+                        <!-- Tech Stack Section -->
+                        <div class="container tech-stack">
+                            <h2 class="tech-stack-title">Tech Stack</h2>
+                            <div class="tech-stack-items">
+                                {% for tech in site.tech-stack %}
+                                <div class="tech-stack-item">
+                                    {{ tech }}
                                 </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </div>
                     </div>
-                    <!-- Experiences Section -->
-                    <div class="container experiences">
-                        <h2 class="experience-title">Experiences</h2>
-                        <div class="experience-items">
-                            {% for experience in site.experiences %}
-                            <div class="experience-item">
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <h3>{{ experience.position }}</h3>
-                                        <p>
-                                            <span class="company">{{ experience.company }}</span>
-                                            <span class="date">{{ experience.date }}</span>
-                                        </p>
-                                        <p>{{ experience.description }}</p>
+                    <div class="content-wrapper">
+                        <h1 class="aboutme-title">About Me</h1>
+                        <br>
+                        <p>{{site.author-bio}}</p>
+                        <br>
+                        <!-- Education Section -->
+                        <div class="container education">
+                            <h2 class="education-title">Education</h2>
+                            <div class="education-items">
+                                {% for education in site.education %}
+                                <div class="education-item">
+                                    <div class="timeline">
+                                        <div class="timeline-content">
+                                            <h3>{{ education.degree }}</h3>
+                                            <p>
+                                                <span class="school">{{ education.school }}</span>
+                                                <span class="date">{{ education.date }}</span>
+                                            </p>
+                                            <p>{{ education.description }}</p>
+                                        </div>
                                     </div>
                                 </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </div>
-                    </div>
-                    <br>
-                    <div class="container columns is-centered">
-                        <div>
-                            <a href="{{site.url}}{{site.baseurl}}/#contact"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Contact
-                                Me</a>
+                        <!-- Experiences Section -->
+                        <div class="container experiences">
+                            <h2 class="experience-title">Experiences</h2>
+                            <div class="experience-items">
+                                {% for experience in site.experiences %}
+                                <div class="experience-item">
+                                    <div class="timeline">
+                                        <div class="timeline-content">
+                                            <h3>{{ experience.position }}</h3>
+                                            <p>
+                                                <span class="company">{{ experience.company }}</span>
+                                                <span class="date">{{ experience.date }}</span>
+                                            </p>
+                                            <p>{{ experience.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
-                        <div>
-                            <a href="{{site.url}}{{site.baseurl}}{{site.resume-path}}"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Download Resume</a>
+                        <br>
+                        <div class="container columns is-centered">
+                            <div>
+                                <a href="{{site.url}}{{site.baseurl}}/#contact"
+                                    class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Contact
+                                    Me</a>
+                            </div>
+                            <div>
+                                <a href="{{site.url}}{{site.baseurl}}{{site.resume-path}}"
+                                    class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Download Resume</a>
+                            </div>
                         </div>
                     </div>
                 </div>
