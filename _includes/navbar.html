@@ -14,9 +14,9 @@
         </div>
 
         <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
-        <div class="navbar-menu has-background-black is-active" id="navbar-menu">
+        <div class="navbar-menu has-background-black" id="navbar-menu">
             <!-- navbar items | right side -->
-            <div class="navbar-end is-flex is-justify-content-space-between is-flex-grow-1">
+            <div class="navbar-end is-flex-grow-1">
                 <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
                     href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
                 <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">ABOUT</a>
@@ -29,11 +29,25 @@
         </div>
     </div>
 </nav>
+
 <!-- Bulma Navbar JS -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         /* Get all "navbar-burger" elements */
         var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        /* Function to close all dropdowns */
+        function closeDropdowns() {
+            var $dropdowns = document.querySelectorAll('.has-dropdown.is-active');
+            $dropdowns.forEach(function ($dropdown) {
+                $dropdown.classList.remove('is-active');
+                var dropdownContent = $dropdown.querySelector('.navbar-dropdown');
+                if (dropdownContent) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        }
+
         /* Check if there are any navbar burgers */
         if ($navbarBurgers.length > 0) {
             /* Add a click event on each of them */
@@ -48,5 +62,36 @@
                 });
             });
         }
+
+        /* Close the menu on window resize */
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 769) {
+                /* Remove the 'is-active' class from navbar-burger and navbar-menu */
+                $navbarBurgers.forEach(function ($el) {
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    $el.classList.remove('is-active');
+                    $target.classList.remove('is-active');
+                });
+            }
+        });
+
+        /* Close the menu when clicking outside of it */
+        document.addEventListener('click', function (event) {
+            var isClickInside = document.getElementById('navbar').contains(event.target);
+
+            if (!isClickInside) {
+                /* Remove the 'is-active' class from navbar-burger and navbar-menu */
+                $navbarBurgers.forEach(function ($el) {
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    $el.classList.remove('is-active');
+                    $target.classList.remove('is-active');
+                });
+
+                /* Close all dropdowns */
+                closeDropdowns();
+            }
+        });
     });
 </script>

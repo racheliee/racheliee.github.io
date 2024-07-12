@@ -28,6 +28,8 @@
   border: none;
   right: 0;
   left: auto;
+  display: none;
+  flex-direction: column;
 }
 
 a.navbar-item:hover,
@@ -48,6 +50,30 @@ a.navbar-item.is-active {
 
 .navbar-link:not(.is-arrowless)::after {
   border-color: grey;
+}
+
+/* Additions for responsive navbar */
+.navbar-burger {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar-burger {
+    display: block;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.is-active {
+    display: block;
+  }
+}
+
+/* Show the dropdown menu when the parent is hovered */
+.has-dropdown:hover .navbar-dropdown {
+  display: flex;
 }
 
 
