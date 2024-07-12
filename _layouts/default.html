@@ -1,23 +1,30 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
 <html>
 {% include head.html %}
 
 <body>
-  {% include navbar.html %}
-  {% include intro.html %}
-  {% include about.html %}
-  {% include contact.html %}
-  <!--Footer begins here-->
-  {% include footer.html %}
+  <div class="scroll-container">
+    <section id="intro" class="scroll-area">
+      {% include navbar.html %}
+      {% include intro.html %}
+    </section>
+    <section id="about" class="scroll-area">
+      {% include about.html %}
+    </section>
+    <section id="contact" class="scroll-area">
+      {% include contact.html %}
+    </section>
+    <!--Footer begins here-->
+    <section id="footer" class="scroll-area">
+      {% include footer.html %}
+    </section>
+  </div>
 </body>
+
 <script>
   var navItems = document.getElementsByClassName('navbar-item');
-  var heroes = document.getElementsByClassName('hero');
-  const viewOffset = 200; 
+  var sections = document.getElementsByClassName('scroll-area');
+  const viewOffset = 200;
 
   window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
@@ -27,15 +34,19 @@ layout: compress
       navItems[i].classList.remove('is-active');
     }
 
-    for (var i = 0; i < heroes.length; i++) {
-        var sectionTop = heroes[i].offsetTop-viewOffset;
-        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight-viewOffset;
+    for (var i = 0; i < sections.length; i++) {
+      var sectionTop = sections[i].offsetTop - viewOffset;
+      var sectionBottom = sections[i].offsetTop + sections[i].offsetHeight - viewOffset;
 
-        if (scroll >= sectionTop && scroll < sectionBottom) {
-          navItems[i+1].classList.add('is-active');
+      if (scroll >= sectionTop && scroll < sectionBottom) {
+        navItems[i].classList.add('is-active');
       }
     }
   });
+
+  // Snap scrolling
+  document.documentElement.style.scrollSnapType = 'y mandatory';
+  document.body.style.scrollSnapType = 'y mandatory';
 </script>
 
 </html>

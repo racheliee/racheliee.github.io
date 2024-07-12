@@ -1,6 +1,19 @@
 --- 
 --- 
 @import "main.scss";
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+    height: 100vh; /* Each section takes full height of viewport */
+    scroll-snap-align: start; /* Snap to start of section */
+    position: relative;
+}
+
 #navbar {
   opacity: 0.95;
   width: 100%;
@@ -44,7 +57,7 @@ a.navbar-item.is-active {
   background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
-
+  
   &::before {
     filter: blur(0.15rem);
     background-image: url({{site.heroimage}});
@@ -73,12 +86,6 @@ a.navbar-item.is-active {
 #about {
   .fixed-column {
     float: left;
-    // position: sticky;
-    // top: 75%;
-    // transform: translateY(-50%);
-    // max-height: calc(100vh - 60rem); /* Adjust the height limit */
-    // display: flex;
-    // flex-direction: column;
     justify-content: center;
     overflow: hidden; /* Ensure content doesn't overflow */
   }

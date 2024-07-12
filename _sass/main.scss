@@ -8,28 +8,8 @@ body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth !important;
     transition: all 0.25s ease;
-}
-
-
-
-/* width */
-::-webkit-scrollbar {
-    width: 0.5vmax !important;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: white !important;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #363636 !important;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: black !important;
+    height: 100vh;
+    overflow: hidden; /* Prevent scroll bars */
 }
 
 ::placeholder {
