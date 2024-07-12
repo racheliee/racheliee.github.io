@@ -53,10 +53,6 @@ a.navbar-item.is-active {
 }
 
 /* Additions for responsive navbar */
-.navbar-burger {
-  display: none;
-}
-
 @media (max-width: 1000px) {
   .navbar-burger {
     display: block;
