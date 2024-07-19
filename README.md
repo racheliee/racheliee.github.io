@@ -1,5 +1,4 @@
-# Personal Portfolio
-This is my personal portfolio website built using jekyll.
+# Rachel's Portfolio
 
 ## Contributions
-- This portfolio was created based on the template provided by [WhatATheme](https://github.com/thedevslot/WhatATheme/tree/master)
+- Based off the template from [al-folio](https://github.com/alshedivat/al-folio)
