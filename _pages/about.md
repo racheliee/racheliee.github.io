@@ -18,8 +18,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hello! My name is Rachel Park, and I am an undergraduate student double majoring in CSE and IE. I am still exploring my interests, and on this website you can find my projects, blogs, resume, and more. Feel free roam around and reach out to me if you have any questions!
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+안녕하세요, 소프트웨어학과 및 산업공학과 전공중인 라첼이라고 합니다. 관심사를 찾기 위해 이것저것 해보는 중입니다ㅎㅎ. 이 웹사이트에서 제 프로젝트, 블로그, 이력서 등을 찾아보실 수 있습니다. 궁금한 점이 있으시면 언제든지 연락주세요!
