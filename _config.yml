@@ -214,9 +214,9 @@ latest_posts:
 
 # Markdown and syntax highlight
 markdown: kramdown
-highlighter: rouge
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
@@ -224,6 +224,8 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+include:
+  - assets/css
 
 # Includes & excludes
 include: ["_pages"]

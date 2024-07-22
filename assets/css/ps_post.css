@@ -1,0 +1,183 @@
+/* assets/css/ps_post.css */
+.ps-post {
+    background-color: #1c1c1e; /* Dark background */
+    color: #f5f5f5; /* Light text color */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.ps-post h1, .ps-post h2, .ps-post h3, .ps-post h4, .ps-post h5, .ps-post h6 {
+    color: #f5f5f5;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ps-post a {
+    color: #6ff5c8; /* Link color */
+    text-decoration: none;
+}
+
+.ps-post a:hover {
+    text-decoration: underline;
+}
+
+.ps-post pre, .ps-post code {
+    background-color: #1e1e1e; /* Dark background for code blocks */
+    color: #dcdcdc; /* Light text color for code */
+    font-family: 'D2Coding', Courier, monospace;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.ps-post pre {
+    margin: 20px 0; /* Margin for code blocks */
+    padding: 15px;
+    font-size: 85%; /* Smaller font size for code blocks */
+}
+
+.ps-post code {
+    padding: 2px 4px;
+    font-size: 85%; /* Smaller font size for inline code */
+}
+
+.ps-post ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.ps-post li {
+    margin: 10px 0;
+}
+
+.ps-post .navbar {
+    background-color: #121212; /* Navbar background */
+    border-bottom: 1px solid #333; /* Border color */
+}
+
+.ps-post .navbar-brand, .ps-post .navbar-nav .nav-link {
+    color: #f5f5f5; /* Navbar text color */
+}
+
+.ps-post .navbar-toggler {
+    border-color: #f5f5f5;
+}
+
+.ps-post .navbar-toggler .icon-bar {
+    background-color: #f5f5f5;
+}
+
+.ps-post .progress-container {
+    width: 100%;
+    background-color: #121212;
+}
+
+.ps-post .progress-bar {
+    height: 5px;
+    background-color: #1e90ff;
+}
+
+.ps-post .dropdown-menu {
+    background-color: #121212; /* Dropdown background */
+    color: #f5f5f5; /* Dropdown text color */
+}
+
+.ps-post .dropdown-item {
+    color: #f5f5f5; /* Dropdown item color */
+}
+
+.ps-post .dropdown-item:hover {
+    background-color: #333; /* Hover effect */
+}
+
+/* Highlighting specific to code blocks */
+.ps-post pre, .ps-post code {
+    background-color: #2d2d2d; /* Slightly lighter background for code */
+    color: #dcdcdc; /* Light text color */
+    border: 1px solid #444; /* Border to make code blocks stand out */
+}
+
+.ps-post pre code {
+    display: block;
+    padding: 0;
+}
+
+.ps-post code {
+    background-color: #2d2d2d;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 85%; /* Adjusted font size */
+}
+
+/* Additional styling for code syntax highlighting */
+.ps-post .token.comment,
+.ps-post .token.block-comment,
+.ps-post .token.prolog,
+.ps-post .token.doctype,
+.ps-post .token.cdata {
+    color: #999988;
+    font-style: italic;
+}
+
+.ps-post .token.punctuation {
+    color: #ccc;
+}
+
+.ps-post .token.tag,
+.ps-post .token.attr-name,
+.ps-post .token.namespace,
+.ps-post .token.deleted {
+    color: #e2777a;
+}
+
+.ps-post .token.function-name {
+    color: #6196cc;
+}
+
+.ps-post .token.boolean,
+.ps-post .token.number,
+.ps-post .token.function {
+    color: #f08d49;
+}
+
+.ps-post .token.property,
+.ps-post .token.class-name,
+.ps-post .token.constant,
+.ps-post .token.symbol {
+    color: #f8c555;
+}
+
+.ps-post .token.selector,
+.ps-post .token.important,
+.ps-post .token.atrule,
+.ps-post .token.keyword,
+.ps-post .token.builtin {
+    color: #cc99cd;
+}
+
+.ps-post .token.string,
+.ps-post .token.char,
+.ps-post .token.attr-value,
+.ps-post .token.regex,
+.ps-post .token.variable {
+    color: #7ec699;
+}
+
+.ps-post .token.operator,
+.ps-post .token.entity,
+.ps-post .token.url {
+    color: #67cdcc;
+}
+
+.ps-post .token.important,
+.ps-post .token.bold {
+    font-weight: bold;
+}
+.ps-post .token.italic {
+    font-style: italic;
+}
+
+.ps-post .token.entity {
+    cursor: help;
+}

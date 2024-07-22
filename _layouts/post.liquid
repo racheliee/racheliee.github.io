@@ -12,9 +12,14 @@ layout: default
   </style>
 {% endif %}
 
+{% if page.ps_post %}
+  <link rel="stylesheet" href="{{ '/assets/css/ps_post.css' | relative_url }}">
+  {% comment %} <link rel="stylesheet" href="{{ '/assets/css/rouge.css' | relative_url }}"> {% endcomment %}
+{% endif %}
+
 {% assign url_beginning = page.url | slice: 0, 6 %}
 
-<div class="post">
+<div class="post {% if page.ps_post %}ps-post{% endif %}">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
