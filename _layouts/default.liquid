@@ -2,6 +2,9 @@
 <html lang="{{ site.lang }}">
   <!-- Head -->
   <head>
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="j_sxh6QcPHpu8xOipgNeKF-F6URQpyV6cd2guMwQcbs" />
+
     {% if page.redirect %}
       {% if page.redirect == true %}
         {% assign redirect = site.baseurl | append: '/' %}
@@ -12,6 +15,7 @@
       {% endif %}
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
+    
     {% include head.liquid %}
   </head>
 
