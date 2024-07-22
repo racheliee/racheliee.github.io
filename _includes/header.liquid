@@ -60,6 +60,8 @@
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
+              {% comment %} choose what menus to exclude from the header {% endcomment %}
+              {% unless p.title == 'news' or p.title == 'teaching' or p.title == 'publications' or p.title == 'people' %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -106,6 +108,7 @@
                   </a>
                 </li>
               {% endif %}
+              {% endunless %}
             {% endif %}
           {% endfor %}
           {% if site.search_enabled %}
